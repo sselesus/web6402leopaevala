@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Контейнер хедера */
+header {
+    background: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+/* Используем Grid для хедера */
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Навигация с Grid */
+header nav {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 20px;
+    justify-items: center;
+}
+
+header nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Поиск */
+header .search img {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* Контейнер контента */
+.content-block {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    background: #f9f9f9;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.content-block.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Заголовки */
+h2, h3 {
+    margin-bottom: 20px;
+}
+
+/* Хлебные крошки */
+.breadcrumb {
+    font-size: 14px;
+    display: flex;
+    gap: 5px;
+    color: gray;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: gray;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+    color: darkgray;
+}
+
+/* Ссылки на главы */
+.chapter-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.chapter-links li {
+    background-color: #f4f4f4;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}

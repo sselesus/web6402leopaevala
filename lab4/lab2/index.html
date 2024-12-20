@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Справочник по программированию</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="languages.html">Языки программирования</a>
+            <a href="form.html">Форма</a>
+            <a href="cpp.html">C++</a>
+            <a href="csharp.html">C#</a>
+        </nav>
+        <div class="search">
+            <img src="input/search-icon.png" alt="Поиск">
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <svg viewBox="0 0 960 200">
+        <symbol id="s-text">
+            <text text-anchor="middle" x="50%" y="80%" font-size="0.6em">Программирование</text>
+        </symbol>
+
+        <g class="g-ants">
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+        </g>
+    </svg>
+</div>
+
+<main>
+    <div class="content-block">
+        <div class="breadcrumb">
+            <a href="index.html">Главная</a>
+        </div>
+        <img src="input/csharp.jpeg" alt="Программирование" class="main-image">
+        <h2>О сайте</h2>
+        <p>Этот сайт представляет собой справочник по языкам программирования. Здесь вы найдете краткую информацию о популярных языках программирования, а также полезные руководства.</p>
+    </div>
+</main>
+<footer>
+    <p>© 2024 Справочник по программированию</p>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const elements = document.querySelectorAll('.content-block');
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible'); // Добавляем класс для анимации
+                    observer.unobserve(entry.target); // Прекращаем наблюдение за элементом
+                }
+            });
+        }, {
+            threshold: 0.5 // Элемент должен быть на 50% видим на экране
+        });
+
+        elements.forEach(element => {
+            observer.observe(element); // Начинаем отслеживать элементы
+        });
+    });
+</script>
+</body>
+</html>

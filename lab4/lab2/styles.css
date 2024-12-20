@@ -1,0 +1,206 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header nav {
+    flex: 1;
+    gap: 20px;
+    text-align: center;
+}
+
+header nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+header .search img {
+    width: 20px;
+    height: 20px;
+}
+
+.breadcrumb {
+    text-decoration: none;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.breadcrumb a {
+    color: gray;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+    color: darkgray;
+}
+
+.content-block {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.content-block.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content-block img.main-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.main-image {
+    width: 100%;
+    max-height: 210px;
+    object-fit: cover;
+    object-position: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table a {
+    color: gray;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+.chapter-links {
+    text-decoration: underline;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+/* Общие стили для контейнера */
+.container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 60px;
+}
+
+svg {
+    display: block;
+    font: 10.5em 'Montserrat';
+    width: 760px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.text-copy {
+    fill: none;
+    stroke-width: 5px;
+    stroke-dasharray: 6% 29%;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+/* Цвета для анимации */
+.text-copy:nth-child(1) {
+    stroke: #60a9ff;
+    animation-delay: -1s;
+}
+
+.text-copy:nth-child(2) {
+    stroke: #1010d1;
+    animation-delay: -2s;
+}
+
+.text-copy:nth-child(3) {
+    stroke: #02b9f4;
+    animation-delay: -3s;
+}
+
+.text-copy:nth-child(4) {
+    stroke: #007BFF;
+    animation-delay: -4s;
+}
+
+.text-copy:nth-child(5) {
+    stroke: #6007df;
+    animation-delay: -5s;
+}
+
+/* Ключевая анимация для stroke */
+@keyframes stroke-offset {
+    100% {
+        stroke-dashoffset: -35%;
+    }
+}
+
+/* Уникальные стили для анимации текста "Программирование" */
+.animated-text-container {
+    position: absolute;
+    top: 100px; /* Расположение анимации под header */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1; /* Чтобы анимация была позади контента */
+    width: 100%;
+    pointer-events: none; /* Отключаем взаимодействие с анимацией */
+}
